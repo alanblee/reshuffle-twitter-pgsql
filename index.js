@@ -16,5 +16,5 @@ const { TwitterConnector } = require("reshuffle-twitter-connector");
     event.res.json({ hello: "world" });
   });
 
-  app.start(8000);
+  app.start(process.env.PORT || 8000);
 })().catch(console.error);
