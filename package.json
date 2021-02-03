@@ -1,0 +1,25 @@
+{
+  "name": "reshuffle-twitter-pgsql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanblee/reshuffle-twitter-pgsql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanblee/reshuffle-twitter-pgsql/issues"
+  },
+  "homepage": "https://github.com/alanblee/reshuffle-twitter-pgsql#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "reshuffle": "^1.0.8",
+    "reshuffle-twitter-connector": "^0.0.1"
+  }
+}
