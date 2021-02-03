@@ -1,12 +1,19 @@
 require("dotenv").config();
-const { Reshuffle } = require("reshuffle");
+const { Reshuffle, HttpConnector } = require("reshuffle");
 const { TwitterConnector } = require("reshuffle-twitter-connector");
 
 (async () => {
   const app = new Reshuffle();
+
+  const httpConnector = new HttpConnector(app);
+
   const twitter = new TwitterConnector(app, {
     customerKey: process.env.TWITTER_CUSTOMER_KEY,
     customerSecret: process.env.TWITTER_CUSTOMER_SECRET,
+  });
+
+  httpConnector.on({ method: "GET", path: "/test" }, (event, app) => {
+    event.res.json({ hello: "world" });
   });
 
   app.start(8000);
