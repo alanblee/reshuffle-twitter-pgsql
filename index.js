@@ -12,7 +12,7 @@ const { TwitterConnector } = require("reshuffle-twitter-connector");
     customerSecret: process.env.TWITTER_CUSTOMER_SECRET,
   });
 
-  httpConnector.on({ method: "GET", path: "/test" }, (event, app) => {
+  httpConnector.on({ method: "GET", path: "/" }, (event, app) => {
     event.res.json({ hello: "world" });
   });
 
